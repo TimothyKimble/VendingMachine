@@ -22,7 +22,22 @@
         </nav>
     </header>
     <main class="container">
-        <div id="app"></div>
+        <div class="row">
+            <div id="app"></div>
+            <div class="col-md-6">
+                <div>
+                    <button class="btn btn-primary" onclick="app.vendingsController.addChange()">Add Change</button>
+                    <h2>Total Change $<span id="total"></span></h2>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id='name'>
+                    <h3></h3>
+                </div>
+                <h1>Price: $<span id="price">...</span></h1>
+                <button class="btn btn-primary" onclick="app.vendingsController.Buy('price')">Buy Product</button>
+            </div>
+        </div>
     </main>
     <footer class="bg-dark text-light">
         <div class="text-center">
