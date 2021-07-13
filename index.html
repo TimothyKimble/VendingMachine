@@ -23,10 +23,10 @@
     </header>
     <main class="container">
         <div class="row">
-            <div id="app"></div>
-            <div class="col-md-6">
+            <div class="col-md-6 d-flex align-self-center justify-content-center">
                 <div>
-                    <button class="btn btn-primary" onclick="app.vendingsController.addChange()">Add Change</button>
+                    <button class="btn btn-primary" onclick="app.vendingsController.addChange(); return false;">Add
+                        Change</button>
                     <h2>Total Change $<span id="total"></span></h2>
                 </div>
             </div>
@@ -36,8 +36,11 @@
                 </div>
                 <h1>Price: $<span id="price">...</span></h1>
                 <button class="btn btn-primary" onclick="app.vendingsController.Buy('price')">Buy Product</button>
+                <button class="btn btn-primary" onclick="app.vendingsController.refill()">Refill Machine</button>
+
             </div>
         </div>
+        <div id="app"></div>
     </main>
     <footer class="bg-dark text-light">
         <div class="text-center">

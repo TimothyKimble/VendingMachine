@@ -8,7 +8,7 @@ class AppState extends EventEmitter {
   values = []
   totalChange = 0
   addChange = .25
-  mountain = new Snacks('Mountain Dew', 'https://www.kroger.com/product/images/large/front/0001200000131', 2)
+  mountain = new Snacks('Mountain Dew', 'https://www.kroger.com/product/images/large/front/0001200000131', 2, 30)
 }
 
 export const ProxyState = new Proxy(new AppState(), {
