@@ -1,5 +1,5 @@
 import Snacks from "./Models/Snack.js"
-import Value from "./Models/Value.js"
+// import Value from "./Models/Value.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
@@ -8,7 +8,14 @@ class AppState extends EventEmitter {
   values = []
   totalChange = 0
   addChange = .25
+
+  work = .05
+
+  wallet = 10
+
   mountain = new Snacks('Mountain Dew', 'https://www.kroger.com/product/images/large/front/0001200000131', 2, 30)
+
+  chip = new Snacks('Doritos', 'https://images.heb.com/is/image/HEBGrocery/002092597', 1, 15)
 }
 
 export const ProxyState = new Proxy(new AppState(), {

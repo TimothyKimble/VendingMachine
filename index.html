@@ -12,7 +12,7 @@
     <title>Vending Machine</title>
 </head>
 
-<body>
+<body class="bg-primary">
     <header>
         <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
             <a class="navbar-brand" href="#">
@@ -23,20 +23,32 @@
     </header>
     <main class="container">
         <div class="row">
-            <div class="col-md-6 d-flex align-self-center justify-content-center">
+            <div class="col-md-6 d-flex align-self-center justify-content-center flex-column">
+                <div class="pb-5" id="wallet"></div>
+                <div class="pb-5"><button class="btn btn-success" onclick="app.vendingsController.work()">Work for
+                        Food</button>
+                </div>
                 <div>
-                    <button class="btn btn-primary" onclick="app.vendingsController.addChange(); return false;">Add
+                    <button class="btn btn-success" onclick="app.vendingsController.addChange(); return false;">Add
                         Change</button>
+                    <button class="btn btn-success" onclick="app.vendingsController.returnChange()">Return
+                        Change</button>
+
+
                     <h2>Total Change $<span id="total"></span></h2>
                 </div>
             </div>
             <div class="col-md-6">
-                <div id='name'>
+                <div id='name' class="text-center">
                     <h3></h3>
                 </div>
-                <h1>Price: $<span id="price">...</span></h1>
-                <button class="btn btn-primary" onclick="app.vendingsController.Buy('price')">Buy Product</button>
-                <button class="btn btn-primary" onclick="app.vendingsController.refill()">Refill Machine</button>
+                <h3 class="text-center">Price: $<span id="price">...</span></h3>
+                <div class="d-flex justify-content-center mb-3">
+                    <button class="btn btn-danger ml-3 mr-3" onclick="app.vendingsController.Buy('price')">Buy
+                        Product</button>
+                    <button class="btn btn-secondary ml-3 mr-3" onclick="app.vendingsController.refill()">Refill
+                        Machine</button>
+                </div>
 
             </div>
         </div>
