@@ -15,7 +15,6 @@ class AppState extends EventEmitter {
 
   mountain = new Snacks('Mountain Dew', 'https://www.kroger.com/product/images/large/front/0001200000131', 2, 30)
 
-  chip = new Snacks('Doritos', 'https://images.heb.com/is/image/HEBGrocery/002092597', 1, 15)
 }
 
 export const ProxyState = new Proxy(new AppState(), {
